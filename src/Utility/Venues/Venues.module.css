@@ -1,0 +1,23 @@
+.Wrapper {
+    width: 100%;
+    height: auto;
+    margin-bottom: 250px;
+}
+
+.Title {
+    color: black;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.44444em;
+    position: relative;
+    top: 30px;
+    left: 80px !important;
+}
+
+.Content {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    top: 120px;
+}

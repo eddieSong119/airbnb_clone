@@ -1,0 +1,32 @@
+.Title {
+    font-size: 30px;
+    color: rgb(255, 56, 92);
+}
+
+.Link {
+    width: 150px;
+    font-size: 24px;
+    color: white;
+}
+
+.Link:hover {
+    cursor: pointer;
+}
+
+.WrapperTransparent {
+    width: 100%;
+    position: absolute;
+    padding: 20px;
+    height: 50px;
+    background-color: transparent;
+}
+
+.WrapperBlack {
+    width: 100%;
+    position: absolute;
+    padding: 20px;
+    height: 50px;
+    background-color: black;
+}
+
+

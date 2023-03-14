@@ -1,0 +1,29 @@
+.Wrapper {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 15px;
+    margin-top: 20vh;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.Title {
+    font-size: 32px;
+    padding-top: 20px !important;
+}
+
+.InputContent {
+    padding-left: 30px !important;
+}
+
+.DatePick {
+    padding-left: 10px !important;
+}
+
+.Button {
+    margin-left: 15px !important;
+    margin-top: 20px !important;
+    background-color: rgb(255, 56, 92) !important;
+    margin-bottom: 30px !important;
+    z-index: 1 !important;
+}
