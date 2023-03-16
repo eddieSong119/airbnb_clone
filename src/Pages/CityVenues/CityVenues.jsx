@@ -1,7 +1,36 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+
+
+import Spinner from '../../Utility/Spinner/Spinner';
+import Venues from '../../Utility/Venues/Venues';
+
+import Styles from './CityVenues.module.css'
 
 export default function CityVenues() {
-  return (
-    <div>CityVenues</div>
-  )
+  const [ venues, setVenues ] = useState([]);
+  const [ header, setHeader ] = useState('');
+  const cityName = useParams().cityName;
+
+  useEffect(() => {
+    const url = `${window.apiHost}/venues/city/${cityName}`;
+    async function getData() {
+      const resp = await axios.get(url);
+      console.log(resp.data)
+      setVenues(resp.data.venues);
+      setHeader(resp.data.header);
+    }
+    getData();
+  }, [])
+
+  if (!header) {
+    return <Spinner/>
+  } else {
+    return (
+      <div>
+        <Venues venues={venues} header={header}/>
+      </div>
+    )
+  }
 }

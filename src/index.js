@@ -15,6 +15,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 //router
 import { BrowserRouter } from 'react-router-dom';
 import autoMergeLevel2 from 'redux-persist/es/stateReconciler/autoMergeLevel2';
+import Spinner from './Utility/Spinner/Spinner';
 
 
 const persistConfig = {
@@ -46,7 +47,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
+    <PersistGate loading={<Spinner/>} persistor={persistor}>
       <BrowserRouter>
         <App/>
       </BrowserRouter>

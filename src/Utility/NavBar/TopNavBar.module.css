@@ -23,9 +23,9 @@
 
 .WrapperBlack {
     width: 100%;
-    position: absolute;
+    position: relative;
     padding: 20px;
-    height: 50px;
+    height: 80px;
     background-color: black;
 }
 

@@ -9,7 +9,7 @@ export default function City(props) {
 
   return (
     <div>
-      <Link to={`/city/${id}`}>
+      <Link to={`/city/${cityName}`}>
         <div className={Styles.Wrapper}>
             <img className={Styles.Img} src={image}/>
             <div className={Styles.CityName}>{cityName}</div>
