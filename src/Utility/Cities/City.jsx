@@ -5,7 +5,7 @@ import Styles from './City.module.css'
 
 
 export default function City(props) {
-  const { id, image, cityName, price } = props.city;
+  const { image, cityName, price } = props.city;
 
   return (
     <div>

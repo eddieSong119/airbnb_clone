@@ -8,7 +8,7 @@ import Cities from '../../Utility/Cities/Cities'
 import Activities from '../../Utility/Activities/Activities'
 import Venues from '../../Utility/Venues/Venues'
 
-export default function Home() {
+export default function Home(props) {
   //initialze the states hooks
   //Cities
   const [ recommendedCities, setRecommendedCities] = useState([]);
@@ -35,9 +35,6 @@ export default function Home() {
     const recommendedVenuesUrl = `${window.apiHost}/venues/recommended`;
     //create Promises lists to fetch the promise given back from axios requests
     const getDataPromises = [];
-    const citiesPromises = [];
-    const activitiesPromises = [];
-    const venuesPromises = [];
 
     async function getData() {
       //Data of Cities

@@ -76,8 +76,9 @@ export default function PaymentSuccess() {
                                     <div className="right">${reservationDetails.totalPrice}</div>
                                 </div>
                             </div>
-                            <div className="col m12 row">To rview or make changes to your reservation in the future, visit your <Link to="/account">account page</Link></div>
-                            <div className={`col m12 ${Styles.ResvImage}`}><img src={reservationDetails.venueData.imageUrl} /></div>
+                            {console.log(userData)}
+                            <div className="col m12 row">To rview or make changes to your reservation in the future, visit your <Link to={`/account/${userData.email}`}>account page</Link></div>
+                            <div className={`col m12 ${Styles.ResvImage}`}><img src={reservationDetails.venueData.imageUrl} alt='reservation' /></div>
                         </div>
                     </div>
                 </div>

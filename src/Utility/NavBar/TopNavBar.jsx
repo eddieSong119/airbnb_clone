@@ -5,9 +5,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import Styles from './TopNavBar.module.css'
 import openModal from '../../Actions/openModal'
 import logOut from '../../Actions/logOut'
-import LogIn from '../../Pages/LogIn/LogIn'
-import SignUp from '../../Pages/LogIn/SignUp'
-import registrationAction from '../../Actions/registrationAction'
 
 export default function TopNavBar(props) {
   const dispatch = useDispatch()
@@ -22,15 +19,15 @@ export default function TopNavBar(props) {
 
   return (
     <div className={`row ${wrapperStyle}`}>
-      <div className={`col s1`}><div className={Styles.Title}>Airbnb</div></div>
-      <div className={`col s1 offset-s5`}><Link to="/" className={Styles.Link}>Log in</Link></div>
-      <div className={`col s1`}><Link to="/" className={Styles.Link}>Log in</Link></div>
-      <div className={`col s1`}><Link to="/" className={Styles.Link}>Log in</Link></div>
-      <div className={`col s1`}><Link to="/" className={Styles.Link}>Log in</Link></div>
+      <div className={`col s1`}><Link to='/' className={Styles.Title}>Airbnb</Link></div>
+      <div className={`col s1 offset-s5`}><Link to="/" className={Styles.Link}>English (US)</Link></div>
+      <div className={`col s1`}><Link to="/" className={Styles.Link}>$ USD </Link></div>
+      <div className={`col s1`}><Link to="/" className={Styles.Link}>Become a host</Link></div>
+      <div className={`col s1`}><Link to="/" className={Styles.Link}>Help</Link></div>
       {
         email
         ? <>
-            <div className={`col s1`}><Link to="/" className={Styles.Link}>{email}</Link></div>
+            <div className={`col s1`}><Link to={`/account/${email}`} className={Styles.Link}>{email}</Link></div>
             <div className={`col s1`}><Link to="/" className={Styles.Link} onClick={clickLogOut}>LogOut</Link></div>
           </>
         : <>

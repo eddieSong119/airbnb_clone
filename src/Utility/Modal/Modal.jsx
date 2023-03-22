@@ -20,6 +20,9 @@ function Modal() {
     case 'SignUp':
       content = <SignUp/>;
       break;
+    default:
+      content = <LogIn/>;
+      break;
   }
 
   //initialize the style tag to control if the modal shows

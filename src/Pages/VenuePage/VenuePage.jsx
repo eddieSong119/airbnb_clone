@@ -28,7 +28,7 @@ export default function VenuePage(props) {
   const [ numberOfGuests, setNumberOfGuests ] = useState('')
 
   //deconstract venue object
-  const { id, imageUrl, details, guests, location, points, pricePerNight, rating, title } = venue;
+  const { imageUrl, details, guests, location, pricePerNight, title } = venue;
   //get account info
   const accInfo = useSelector(state => state.persistedReducer.auth);
   const dispatch = useDispatch();

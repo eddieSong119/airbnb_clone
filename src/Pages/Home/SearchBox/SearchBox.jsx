@@ -1,16 +1,22 @@
 import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom";
 
 import Styles from './SearchBox.module.css'
 
-export default function SearchBox() {
+export default function SearchBox(props) {
   const [ cityName, setCityName] = useState('')
   const [ checkInDate, setCheckInDate] = useState('')
   const [ checkOutDate, setCheckOutDate] = useState('')
   const [ guests, setGuests] = useState(0)
+  const navigate = useNavigate()
 
+  function submitSearch(e) {
+    e.preventDefault();
+    navigate(`/search/${cityName}`);
+  }
 
   return (
-    <form className={`row ${Styles.Wrapper}`}>
+    <form className={`row ${Styles.Wrapper}`} onSubmit={submitSearch}>
         <div className= {`col s12 ${Styles.Title}`}>Where</div>
         <input className={`input_field col s12 ${Styles.InputContent}`} type={'text'} placeholder='To your destination' onChange={(e)=> setCityName(e.target.value)}/>
        
