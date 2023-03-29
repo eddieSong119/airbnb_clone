@@ -3,10 +3,10 @@ import axios from "axios";
 
 import SearchBox from "./SearchBox/SearchBox";
 import Styles from "./Home.module.css";
-import Spinner from "../../Utility/Spinner/Spinner";
-import Cities from "../../Utility/Cities/Cities";
-import Activities from "../../Utility/Activities/Activities";
-import Venues from "../../Utility/Venues/Venues";
+import Spinner from "../../utility/Spinner/Spinner";
+import Cities from "../../utility/Cities/Cities";
+import Activities from "../../utility/Activities/Activities";
+import Venues from "../../utility/Venues/Venues";
 
 export default function Home(props) {
   //initialze the states hooks

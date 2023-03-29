@@ -1,16 +1,16 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import NavBar from "./Utility/NavBar/NavBar";
-import Home from "./Pages/Home/Home";
-import Modal from "./Utility/Modal/Modal";
-import CityVenues from "./Pages/CityVenues/CityVenues";
-import VenuePage from "./Pages/VenuePage/VenuePage";
-import Account from "./Pages/Account/Account";
-import Bookings from "./Pages/Account/Bookings";
-import PaymentSuccess from "./Pages/Payment/PaymentSuccess";
-import ChangePassword from "./Pages/Account/ChangePassword";
-import Search from "./Pages/Search/Search";
+import NavBar from "./utility/NavBar/NavBar";
+import Home from "./pages/Home/Home";
+import Modal from "./utility/Modal/Modal";
+import CityVenues from "./pages/CityVenues/CityVenues";
+import VenuePage from "./pages/VenuePage/VenuePage";
+import Account from "./pages/Account/Account";
+import Bookings from "./pages/Account/Bookings";
+import PaymentSuccess from "./pages/Payment/PaymentSuccess";
+import ChangePassword from "./pages/Account/ChangePassword";
+import Search from "./pages/Search/Search";
 
 import "./App.css";
 import "./reset.css";

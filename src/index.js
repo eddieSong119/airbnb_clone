@@ -6,7 +6,7 @@ import App from "./App";
 // redux
 import { Provider } from "react-redux";
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import rootReducer from "./Reducers/rootReducer";
+import rootReducer from "./reducers/rootReducer";
 // redux-persist
 import {
   persistStore,
@@ -24,7 +24,7 @@ import { PersistGate } from "redux-persist/integration/react";
 //router
 import { BrowserRouter } from "react-router-dom";
 import autoMergeLevel2 from "redux-persist/es/stateReconciler/autoMergeLevel2";
-import Spinner from "./Utility/Spinner/Spinner";
+import Spinner from "./utility/Spinner/Spinner";
 
 const persistConfig = {
   key: "root",

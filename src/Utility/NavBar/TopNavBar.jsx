@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import Styles from "./TopNavBar.module.css";
-import openModal from "../../Actions/openModal";
-import logOut from "../../Actions/logOut";
+import openModal from "../../actions/openModal";
+import logOut from "../../actions/logOut";
 
 export default function TopNavBar(props) {
   const dispatch = useDispatch();

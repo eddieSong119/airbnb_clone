@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-import Spinner from "../../Utility/Spinner/Spinner";
-import Cities from "../../Utility/Cities/Cities";
-import Activities from "../../Utility/Activities/Activities";
-import Venues from "../../Utility/Venues/Venues";
+import Spinner from "../../utility/Spinner/Spinner";
+import Cities from "../../utility/Cities/Cities";
+import Activities from "../../utility/Activities/Activities";
+import Venues from "../../utility/Venues/Venues";
 import Styles from "../Home/Home.module.css";
 
 export default function Search() {

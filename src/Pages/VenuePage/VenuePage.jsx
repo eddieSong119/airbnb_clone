@@ -7,8 +7,8 @@ import swal from "sweetalert";
 
 import Styles from "./VenuePage.module.css";
 import Point from "./Point";
-import openModal from "../../Actions/openModal";
-import loadScript from "../../UtilityFunctions/loadScript";
+import openModal from "../../actions/openModal";
+import loadScript from "../../utilityFunctions/loadScript";
 
 // This page shows the detailed information of a single venue
 export default function VenuePage(props) {

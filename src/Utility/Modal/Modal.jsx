@@ -2,9 +2,9 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import Styles from "./Modal.module.css";
-import closeModal from "../../Actions/closeModal";
-import SignUp from "../../Pages/LogIn/SignUp";
-import LogIn from "../../Pages/LogIn/LogIn";
+import closeModal from "../../actions/closeModal";
+import SignUp from "../../pages/LogIn/SignUp";
+import LogIn from "../../pages/LogIn/LogIn";
 
 function Modal() {
   //initialize the dispatch function using hook

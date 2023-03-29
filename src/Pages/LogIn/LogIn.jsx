@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
 import "./LogIn.css";
-import openModal from "../../Actions/openModal";
+import openModal from "../../actions/openModal";
 import axios from "axios";
 import swal from "sweetalert";
-import closeModal from "../../Actions/closeModal";
-import logInAction from "../../Actions/logInAction";
+import closeModal from "../../actions/closeModal";
+import logInAction from "../../actions/logInAction";
 
 export default function LogIn() {
   const dispatch = useDispatch();

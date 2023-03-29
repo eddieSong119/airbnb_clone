@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import moment from "moment";
-import Spinner from "../../Utility/Spinner/Spinner";
+import Spinner from "../../utility/Spinner/Spinner";
 import Styles from "./PaymentSuccess.module.css";
 
 export default function PaymentSuccess() {

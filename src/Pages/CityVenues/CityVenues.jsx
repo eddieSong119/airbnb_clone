@@ -2,8 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import Spinner from "../../Utility/Spinner/Spinner";
-import Venues from "../../Utility/Venues/Venues";
+import Spinner from "../../utility/Spinner/Spinner";
+import Venues from "../../utility/Venues/Venues";
 
 export default function CityVenues() {
   const [venues, setVenues] = useState([]);

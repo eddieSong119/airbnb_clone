@@ -4,9 +4,9 @@ import axios from "axios";
 import swal from "sweetalert";
 
 import "./LogIn.css";
-import openModal from "../../Actions/openModal";
-import registration from "../../Actions/registrationAction";
-import closeModal from "../../Actions/closeModal";
+import openModal from "../../actions/openModal";
+import registration from "../../actions/registrationAction";
+import closeModal from "../../actions/closeModal";
 
 export default function SignUp() {
   const dispatch = useDispatch();

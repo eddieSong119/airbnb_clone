@@ -6,7 +6,7 @@ import moment from "moment";
 import AccountSideBar from "./AccountSideBar";
 import Styles from "./Account.module.css";
 import axios from "axios";
-import storeBookingAction from "../../Actions/StoreBookings";
+import storeBookingAction from "../../actions/StoreBookings";
 
 export default function Account() {
   const dispatch = useDispatch();
