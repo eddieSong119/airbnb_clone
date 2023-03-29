@@ -1,25 +1,27 @@
-.ActivityCard{
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
+.ActivityCard {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
 }
 
-img{
-    max-width: 100%;
+img {
+  max-width: 100%;
 }
 
-.ActivityType, .ActivityTitle{
-    color: white;
-    position: relative;
-    bottom: 50px;
-    text-align: center;
+.ActivityType,
+.ActivityTitle {
+  color: white;
+  position: relative;
+  bottom: 50px;
+  text-align: center;
 }
 
-.Cost, .Rating {
-    position: relative;
-    bottom: 45px;
-    font-weight: bolder;
+.Cost,
+.Rating {
+  position: relative;
+  bottom: 45px;
+  font-weight: bolder;
 }

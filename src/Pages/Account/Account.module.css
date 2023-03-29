@@ -1,27 +1,26 @@
 .SideWrapper {
-    height: 100vh;
+  height: 100vh;
 }
 
 .SideBarLink {
-    display: block;
-    width: 200px;
-    height: 100px;
-    line-height: 100px;
-    border: 1px solid gainsboro;
-    text-align: center;
-    background-color: rgb(206, 203, 203);
-    color: white;
+  display: block;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  border: 1px solid gainsboro;
+  text-align: center;
+  background-color: rgb(206, 203, 203);
+  color: white;
 }
 
 .SideBarLinkActive {
-    display: block;
-    width: 200px;
-    height: 100px;
-    line-height: 100px;
-    border: 1px solid gainsboro;
-    text-align: center;
-    background-color: gr;
-    background-color: rgb(255, 252, 252);
-    color: black;
+  display: block;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  border: 1px solid gainsboro;
+  text-align: center;
+  background-color: gr;
+  background-color: rgb(255, 252, 252);
+  color: black;
 }
-

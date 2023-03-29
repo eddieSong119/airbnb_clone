@@ -1,45 +1,51 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-import Styles from './Modal.module.css';
-import closeModal from '../../Actions/closeModal';
-import SignUp from '../../Pages/LogIn/SignUp';
-import LogIn from '../../Pages/LogIn/LogIn';
-
+import Styles from "./Modal.module.css";
+import closeModal from "../../Actions/closeModal";
+import SignUp from "../../Pages/LogIn/SignUp";
+import LogIn from "../../Pages/LogIn/LogIn";
 
 function Modal() {
   //initialize the dispatch function using hook
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   //get the content shows in the modal
-  const contentType = useSelector(state => state.persistedReducer.modal.content);
+  const contentType = useSelector(
+    (state) => state.persistedReducer.modal.content
+  );
   let content;
   switch (contentType) {
-    case 'LogIn':
-      content = <LogIn/>;
+    case "LogIn":
+      content = <LogIn />;
       break;
-    case 'SignUp':
-      content = <SignUp/>;
+    case "SignUp":
+      content = <SignUp />;
       break;
     default:
-      content = <LogIn/>;
+      content = <LogIn />;
       break;
   }
 
   //initialize the style tag to control if the modal shows
-  let DisplayControl = {display: useSelector(state => state.persistedReducer.modal.display)};
-
-  
+  let DisplayControl = {
+    display: useSelector((state) => state.persistedReducer.modal.display),
+  };
 
   return (
-    <div style={DisplayControl}> 
+    <div style={DisplayControl}>
       <div className={Styles.Wrapper}>
         <div className={Styles.Content}>
-          <button id={Styles.closeButton} onClick={() => dispatch(closeModal())}>x</button>
+          <button
+            id={Styles.closeButton}
+            onClick={() => dispatch(closeModal())}
+          >
+            x
+          </button>
           {content}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-  export default Modal;
+export default Modal;

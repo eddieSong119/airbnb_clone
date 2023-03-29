@@ -1,32 +1,30 @@
 .Title {
-    font-size: 30px;
-    color: rgb(255, 56, 92);
+  font-size: 30px;
+  color: rgb(255, 56, 92);
 }
 
 .Link {
-    width: 150px;
-    font-size: 16px;
-    color: white;
+  width: 150px;
+  font-size: 16px;
+  color: white;
 }
 
 .Link:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .WrapperTransparent {
-    width: 100%;
-    position: absolute;
-    padding: 20px;
-    height: 50px;
-    background-color: transparent;
+  width: 100%;
+  position: absolute;
+  padding: 20px;
+  height: 50px;
+  background-color: transparent;
 }
 
 .WrapperBlack {
-    width: 100%;
-    position: relative;
-    padding: 20px;
-    height: 80px;
-    background-color: black;
+  width: 100%;
+  position: relative;
+  padding: 20px;
+  height: 80px;
+  background-color: black;
 }
-
-

@@ -1,5 +1,5 @@
 export default () => {
-    return {
-        type: 'LOGOUT_ACTION',
-    }
-}
+  return {
+    type: "LOGOUT_ACTION",
+  };
+};

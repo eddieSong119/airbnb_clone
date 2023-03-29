@@ -1,61 +1,61 @@
-img{
-    max-width: 100%;
+img {
+  max-width: 100%;
 }
 
-.ReservationSuccess{
-    margin-top: 75px;
+.ReservationSuccess {
+  margin-top: 75px;
 }
 
-.Confirmed{
-    font-size: 42px;
-    font-weight: bold;
+.Confirmed {
+  font-size: 42px;
+  font-weight: bold;
 }
 
-.Confirmed svg{
-    margin-right: 10px;
+.Confirmed svg {
+  margin-right: 10px;
 }
 
-.Confirmed .HeaderText{
-    font-size: 16px;
-    font-weight: normal;
+.Confirmed .HeaderText {
+  font-size: 16px;
+  font-weight: normal;
 }
 
-.ConfirmedDetail .Bordered{
-    border: 1px solid;
+.ConfirmedDetail .Bordered {
+  border: 1px solid;
 }
 
-.ConfirmedDetail .Upper{
-    margin-top: 30px;
+.ConfirmedDetail .Upper {
+  margin-top: 30px;
 }
-.ConfirmedDetail .Lower{
-    margin-bottom: 30px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.Charges.row{
-    margin-left: 15px;
+.ConfirmedDetail .Lower {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.ChargesText{
-    font-weight: bold;
-    font-size: 24px;
+.Charges.row {
+  margin-left: 15px;
 }
 
-.row.col.total{
-    padding: 30px;
-    background-color: #ECEFEC;
+.ChargesText {
+  font-weight: bold;
+  font-size: 24px;
 }
 
-.TitleText{
-    font-size: 18px;
-    font-weight: bold;
+.row.col.total {
+  padding: 30px;
+  background-color: #ecefec;
+}
+
+.TitleText {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .Details {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 .ResvImage {
-    padding: 50px;   
-    margin-bottom: 30px;
+  padding: 50px;
+  margin-bottom: 30px;
 }

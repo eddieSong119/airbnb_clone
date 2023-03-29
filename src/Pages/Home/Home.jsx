@@ -1,28 +1,27 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-import SearchBox from './SearchBox/SearchBox'
-import Styles from './Home.module.css'
-import Spinner from '../../Utility/Spinner/Spinner'
-import Cities from '../../Utility/Cities/Cities'
-import Activities from '../../Utility/Activities/Activities'
-import Venues from '../../Utility/Venues/Venues'
+import SearchBox from "./SearchBox/SearchBox";
+import Styles from "./Home.module.css";
+import Spinner from "../../Utility/Spinner/Spinner";
+import Cities from "../../Utility/Cities/Cities";
+import Activities from "../../Utility/Activities/Activities";
+import Venues from "../../Utility/Venues/Venues";
 
 export default function Home(props) {
   //initialze the states hooks
   //Cities
-  const [ recommendedCities, setRecommendedCities] = useState([]);
-  const [ europeCities, setEuropeCities ] = useState({});
-  const [ asiaCities, setAsiaCities ] = useState({});
-  const [ exoticCities, setExoticCities ] = useState({});
+  const [recommendedCities, setRecommendedCities] = useState([]);
+  const [europeCities, setEuropeCities] = useState({});
+  const [asiaCities, setAsiaCities] = useState({});
+  const [exoticCities, setExoticCities] = useState({});
   //Activities
-  const [ todayActivities, setTodayActivities ] = useState([]);
+  const [todayActivities, setTodayActivities] = useState([]);
   //Venues
-  const [ recommendedVenues, setRecommendedVenues ] = useState({});
-
+  const [recommendedVenues, setRecommendedVenues] = useState({});
 
   //Get List of Recommended Cities
-  useEffect(()=>{
+  useEffect(() => {
     //initialize the urls
     //Cities
     const recommendedCitiesUrl = `${window.apiHost}/cities/recommended`;
@@ -63,32 +62,34 @@ export default function Home(props) {
       //Data of Venues
       setRecommendedVenues(dataResponse[5].data);
     }
-     getData();
-  },[])
+    getData();
+  }, []);
   //If haven't receivied any data from API, load the Spinner.
-  if(recommendedCities.length === 0) {
-    return(
-      <Spinner/>
-    )
+  if (recommendedCities.length === 0) {
+    return <Spinner />;
   }
 
   return (
     <div>
       <div className={`row ${Styles.SearchBoxContainer}`}>
-        <div className='col s9 m6 l6 xl3  offset-s1 offset-m1 offset-l1 offset-xl1'>
-           <SearchBox/>
+        <div className="col s9 m6 l6 xl3  offset-s1 offset-m1 offset-l1 offset-xl1">
+          <SearchBox />
         </div>
       </div>
       <div className={Styles.LowerContainer}>
-        <Cities cities={recommendedCities} header='Recommended cities for you'/>
-        <Activities activities={todayActivities} header='Today in your area'/>
-        <Cities cities={europeCities.cities} header={europeCities.header}/>
-        <Cities cities={asiaCities.cities} header={asiaCities.header}/>
-        <Venues venues={recommendedVenues.venues} header={recommendedVenues.header}/>
-        <Cities cities={exoticCities.cities} header={exoticCities.header}/>
+        <Cities
+          cities={recommendedCities}
+          header="Recommended cities for you"
+        />
+        <Activities activities={todayActivities} header="Today in your area" />
+        <Cities cities={europeCities.cities} header={europeCities.header} />
+        <Cities cities={asiaCities.cities} header={asiaCities.header} />
+        <Venues
+          venues={recommendedVenues.venues}
+          header={recommendedVenues.header}
+        />
+        <Cities cities={exoticCities.cities} header={exoticCities.header} />
       </div>
     </div>
-  )
+  );
 }
-
- 

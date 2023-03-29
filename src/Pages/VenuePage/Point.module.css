@@ -1,12 +1,12 @@
 .Wrapper {
-    margin-top: 20px;
-    margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .Title {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .Description {
-    font-style: italic;
+  font-style: italic;
 }

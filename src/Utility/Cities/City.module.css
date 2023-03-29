@@ -1,19 +1,20 @@
-.Wrapper{
-    width: 371px;
-    margin: 0;
+.Wrapper {
+  width: 371px;
+  margin: 0;
 }
 
-.Img{
-    max-width: 100%;
+.Img {
+  max-width: 100%;
 }
 
-.CityName, .Price{
-    color: white;
-    position: relative;
-    bottom: 50px;
-    text-align: center;
+.CityName,
+.Price {
+  color: white;
+  position: relative;
+  bottom: 50px;
+  text-align: center;
 }
 
-.Price{
-    font-weight: normal;
+.Price {
+  font-weight: normal;
 }
