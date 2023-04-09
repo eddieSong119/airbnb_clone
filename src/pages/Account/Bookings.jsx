@@ -30,7 +30,6 @@ export default function Bookings() {
         bid,
       };
       const resp = await axios.post(url, data);
-      console.log(resp.data);
       if (resp.data.msg === "cancelled") {
         swal({
           title: "canceled",
@@ -64,7 +63,7 @@ export default function Bookings() {
         <td>
           <div className="booking-detail">Confirmation #: {booking.conf}</div>
           <div className="booking-detail">
-            {booking.numberOfGuests} Guests, {booking.totalNights} Nights
+            {booking.numberOfGuests} Guests, {booking.diffDays} Nights
           </div>
           <div className="booking-detail">
             ${booking.pricePerNight} per night
