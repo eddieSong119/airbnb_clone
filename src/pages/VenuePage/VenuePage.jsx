@@ -91,14 +91,18 @@ export default function VenuePage(props) {
         numberOfGuests,
         currency: "USD",
       };
-      const sessionVar = await axios.post(stripSessionUrl, data);
-      stripe
+      try {
+        const sessionVar = await axios.post(stripSessionUrl, data);
+        stripe
         .redirectToCheckout({
           sessionId: sessionVar.data.id,
         })
         .then((result) => {
           console.log(result);
         });
+      } catch (err) {
+        console.log(err);
+      }
     }
   }
 
