@@ -48,7 +48,7 @@ export default function TopNavBar(props) {
       </div> */}
       {email ? (
         <>
-          <div className={`col s1 offset-s8`}>
+          <div className={`col s1 offset-s9`}>
             <Link to={`/account/${email}`} className={Styles.Link}>
               {email}
             </Link>
