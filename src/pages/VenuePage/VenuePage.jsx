@@ -25,7 +25,7 @@ export default function VenuePage(props) {
   //initializa the state of informations in the booking box
   const [checkInDate, setCheckInDate] = useState("");
   const [checkOutDate, setCheckOutDate] = useState("");
-  const [numberOfGuests, setNumberOfGuests] = useState("");
+  const [numberOfGuests, setNumberOfGuests] = useState(1);
 
   //deconstract venue object
   const { imageUrl, details, guests, location, pricePerNight, title } = venue;
