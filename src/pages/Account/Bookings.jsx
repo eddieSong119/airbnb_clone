@@ -61,7 +61,7 @@ export default function Bookings() {
           <div className="booking-detail">{booking.venueData.location}</div>
         </td>
         <td>
-          <div className="booking-detail">Confirmation #: {booking.conf}</div>
+          <div className="booking-detail">Confirmation #: {booking.id}</div>
           <div className="booking-detail">
             {booking.numberOfGuests} Guests, {booking.diffDays} Nights
           </div>
