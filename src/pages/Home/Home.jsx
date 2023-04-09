@@ -68,7 +68,6 @@ export default function Home(props) {
   if (recommendedCities.length === 0) {
     return <Spinner />;
   }
-
   return (
     <div>
       <div className={`row ${Styles.SearchBoxContainer}`}>

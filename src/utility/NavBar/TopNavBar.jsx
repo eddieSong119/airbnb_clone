@@ -26,7 +26,7 @@ export default function TopNavBar(props) {
           Airbnb
         </Link>
       </div>
-      <div className={`col s1 offset-s5`}>
+      {/* <div className={`col s1 offset-s5`}>
         <Link to="/" className={Styles.Link}>
           English (US)
         </Link>
@@ -45,10 +45,10 @@ export default function TopNavBar(props) {
         <Link to="/" className={Styles.Link}>
           Help
         </Link>
-      </div>
+      </div> */}
       {email ? (
         <>
-          <div className={`col s1`}>
+          <div className={`col s1 offset-s8`}>
             <Link to={`/account/${email}`} className={Styles.Link}>
               {email}
             </Link>
@@ -61,7 +61,7 @@ export default function TopNavBar(props) {
         </>
       ) : (
         <>
-          <div className={`col s1`}>
+          <div className={`col s1 offset-s9`}>
             <div
               className={Styles.Link}
               onClick={() => dispatch(openModal("LogIn"))}

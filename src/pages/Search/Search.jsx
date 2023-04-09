@@ -30,6 +30,9 @@ export default function Search() {
   if (!apiResponsed) {
     return <Spinner />;
   } else {
+    console.log(cities);
+    console.log(activities);
+    console.log(venues);
     return (
       <div className={`${Styles.LowerContainer} container-fluid`}>
         <div className="row">

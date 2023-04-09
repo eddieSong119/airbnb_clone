@@ -76,7 +76,7 @@ export default function VenuePage(props) {
       const totalPrice = pricePerNight * reservedDays;
       const scriptUrl = "https://js.stripe.com/v3";
       const stripePublicKey =
-        "pk_test_5198HtPL5CfCPYJ3X8TTrO06ChWxotTw6Sm2el4WkYdrfN5Rh7vEuVguXyPrTezvm3ntblRX8TpjAHeMQfHkEpTA600waD2fMrT";
+        "pk_test_51Mtr2dGFXXncKqay1vYTmXuORD6TAz5jxEkRbWe3aVHr4OrIJEEedxwiohNZTXsLXjDPQ8xPX8iJEjDgQz23P8oO00BHjSK6kn";
       await loadScript(scriptUrl);
       const stripe = window.Stripe(stripePublicKey);
       const stripSessionUrl = `${window.apiHost}/payment/create-session`;

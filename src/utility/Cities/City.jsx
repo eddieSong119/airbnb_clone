@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import { Link } from "react-router-dom";
 
 import Styles from "./City.module.css";
@@ -10,7 +10,7 @@ export default function City(props) {
     <div>
       <Link to={`/city/${cityName}`}>
         <div className={Styles.Wrapper}>
-          <img className={Styles.Img} src={image} />
+          <img className={Styles.Img} src={image} loading="lazy" />
           <div className={Styles.CityName}>{cityName}</div>
           <div className={Styles.Price}>${price} per night</div>
         </div>

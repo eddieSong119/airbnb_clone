@@ -15,7 +15,7 @@ export default function City(props) {
     <div>
       <div className={Styles.ActivityCard}>
         <div className={Styles.ActivityImage}>
-          <img src={image} alt="activity" />
+          <img src={image} alt="activity" loading="lazy" />
         </div>
         <div className={Styles.ActivityType}>{activityType}</div>
         <div className={Styles.ActivityTitle}>{title}</div>
