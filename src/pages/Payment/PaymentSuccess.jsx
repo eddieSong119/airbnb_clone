@@ -11,20 +11,38 @@ export default function PaymentSuccess() {
   const token = useSelector((state) => state.persistedReducer.auth.token);
   const data = { stripeToken, token };
 
+  const [paymentSucceeded, setPaymentSucceeded] = useState(false);
   const [reservationDetails, setReservationDetails] = useState({});
   const [userData, setUserData] = useState({});
   const [waiting, setWaiting] = useState(true);
 
   useEffect(() => {
-    const url = `${window.apiHost}/payment/success`;
-    async function getData() {
-      const resp = await axios.post(url, data);
-      setReservationDetails(resp.data.reservationDetails);
-      setUserData(resp.data.userData);
-      setWaiting(false);
+    const interval = setInterval(async () => {
+      const url = `${window.apiHost}/payment/check_status`;
+      const paymentInfo = { stripeToken };
+      const resp = await axios.post(url, paymentInfo);
+      if (resp.data.status === "confirmed") {
+        clearInternal(interval);
+        setPaymentSucceeded(true);
+      }
+    }, 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [stripeToken]);
+
+  useEffect(() => {
+    if (paymentSucceeded) {
+      const url = `${window.apiHost}/payment/success`;
+      async function getData() {
+        const resp = await axios.post(url, data);
+        setReservationDetails(resp.data.reservationDetails);
+        setUserData(resp.data.userData);
+        setWaiting(false);
+      }
+      getData();
     }
-    getData();
-  }, []);
+  }, [paymentSucceeded, stripeToken]);
 
   if (waiting) {
     return <Spinner />;

@@ -80,6 +80,7 @@ export default function VenuePage(props) {
       await loadScript(scriptUrl);
       const stripe = window.Stripe(stripePublicKey);
       const stripSessionUrl = `${window.apiHost}/payment/create-session`;
+      console.log(venue);
       const data = {
         venueData: venue,
         totalPrice,
@@ -94,12 +95,12 @@ export default function VenuePage(props) {
       try {
         const sessionVar = await axios.post(stripSessionUrl, data);
         stripe
-        .redirectToCheckout({
-          sessionId: sessionVar.data.id,
-        })
-        .then((result) => {
-          console.log(result);
-        });
+          .redirectToCheckout({
+            sessionId: sessionVar.data.id,
+          })
+          .then((result) => {
+            console.log(result);
+          });
       } catch (err) {
         console.log(err);
       }
