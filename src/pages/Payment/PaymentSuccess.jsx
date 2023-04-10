@@ -22,7 +22,7 @@ export default function PaymentSuccess() {
       const paymentInfo = { stripeToken };
       const resp = await axios.post(url, paymentInfo);
       if (resp.data.status === "confirmed") {
-        clearInternal(interval);
+        clearInterval(interval);
         setPaymentSucceeded(true);
       }
     }, 1000);
