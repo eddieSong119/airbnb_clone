@@ -76,7 +76,7 @@ export default function Bookings() {
           booking.status !== "cancelled" ? (
             <div
               onClick={() =>
-                cancelBooking(booking.id, booking.venueData.location)
+                cancelBooking(booking._id, booking.venueData.location)
               }
               className="booking-detail pointer"
             >

@@ -21,9 +21,6 @@ export default function PaymentSuccess() {
       const url = `${window.apiHost}/payment/check_status`;
       const paymentInfo = { stripeToken };
       const resp = await axios.post(url, paymentInfo);
-      console.log(`resp is: ${resp}`);
-      console.log(`data is: ${resp.data.status}`);
-      console.log(resp.data);
       if (resp.data.status === "confirmed") {
         console.log(`start to clear interval`);
         clearInterval(interval);
