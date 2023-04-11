@@ -4,6 +4,7 @@ import moment from "moment";
 import swal from "sweetalert";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import Styles from "./Account.module.css";
 
 export default function Bookings() {
   const upcomingBookings = useSelector(
@@ -71,14 +72,16 @@ export default function Bookings() {
           <div className="booking-detail">${booking.totalPrice} Total</div>
         </td>
         <td>
-          <div className="booking-detail pointer">Print Reservation</div>
+          <div className={`booking-detail ${Styles.pointer}`}>
+            Print Reservation
+          </div>
           {bookingType.confirmed === "confirmed" &&
           booking.status !== "cancelled" ? (
             <div
               onClick={() =>
-                cancelBooking(booking._id, booking.venueData.location)
+                cancelBooking(booking.stripeId, booking.venueData.location)
               }
-              className="booking-detail pointer"
+              className={`booking-detail ${Styles.pointer}`}
             >
               Cancel Booking
             </div>

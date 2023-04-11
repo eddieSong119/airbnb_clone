@@ -32,6 +32,10 @@
   text-decoration: none;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   .SideWrapper {
     height: auto;
