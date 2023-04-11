@@ -39,10 +39,10 @@ export default function Account() {
   return (
     <>
       <div className="row">
-        <div className={`col s2 offset-s1 ${Styles.SideWrapper}`}>
+        <div className={`col s3 l1 ${Styles.SideWrapper}`}>
           <AccountSideBar accountInfo={accountInfo} />
         </div>
-        <div className="col s7 offset-s1">
+        <div className="col s7 l7 offset-l3">
           <Outlet />
         </div>
       </div>

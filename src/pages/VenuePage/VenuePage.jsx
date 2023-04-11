@@ -123,7 +123,7 @@ export default function VenuePage(props) {
           <div className={Styles.DetailInfo}>{details}</div>
         </div>
 
-        <div className={`col s12 m6 l3 offset-l3 ${Styles.BookingBox}`}>
+        <div className={`col s12 m6 l4 ${Styles.BookingBox}`}>
           <div className={Styles.BookingCard}>
             <div className={`col s12 ${Styles.Price}`}>
               ${pricePerNight}/Night

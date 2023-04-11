@@ -1,27 +1,72 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Outlet, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import "./ResponsiveNavBar.css";
 
-import TopNavBar from "./TopNavBar";
-import BottomNavBar from "./BottomNavBar";
+import openModal from "../../actions/openModal";
+import logOut from "../../actions/logOut";
 
 function NavBar() {
-  // Check if this page is home page, for the color change of nav bar
+  const dispatch = useDispatch();
+  const [menuOpen, setMenuOpen] = useState(false);
+  //Nav links before and after login/signup
+  const email = useSelector((state) => state.persistedReducer.auth.email);
+  // Check in this page is home page
   const isHomePage = Object.keys(useParams()).length === 0;
-  // Switch Top/Bottom nav bar based on the width of the screen
-  const [width, setWidth] = useState(window.innerWidth);
-  const swithpoint = 1200;
-  useEffect(() => {
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
-  }, []);
 
-  return width > swithpoint ? (
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const clickLogOut = () => {
+    dispatch(logOut());
+  };
+
+  return (
     <>
-      <TopNavBar isHomepage={isHomePage} />
-      <Outlet />
-    </>
-  ) : (
-    <>
-      <BottomNavBar />
+      <nav className={`navbar ${isHomePage ? "homepage" : ""}`}>
+        <Link to="/" className="navbar-brand">
+          Airbnb
+        </Link>
+        <button className="hamburger" onClick={toggleMenu}>
+          &#9776;
+        </button>
+        <div className={`navbar-menu ${menuOpen ? "open" : ""}`}>
+          {email ? (
+            <>
+              <Link
+                to={`/account/${email}`}
+                className={`navbar-link ${isHomePage ? "homepage" : ""}`}
+              >
+                {email}
+              </Link>
+              <Link
+                to="/"
+                className={`navbar-link ${isHomePage ? "homepage" : ""}`}
+                onClick={clickLogOut}
+              >
+                LogOut
+              </Link>
+            </>
+          ) : (
+            <>
+              <div
+                className={`navbar-link ${isHomePage ? "homepage" : ""}`}
+                onClick={() => dispatch(openModal("LogIn"))}
+              >
+                Log in
+              </div>
+              <div
+                className={`navbar-link ${isHomePage ? "homepage" : ""}`}
+                onClick={() => dispatch(openModal("SignUp"))}
+              >
+                Sign up
+              </div>
+            </>
+          )}
+        </div>
+      </nav>
       <Outlet />
     </>
   );

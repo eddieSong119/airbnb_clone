@@ -1,6 +1,7 @@
 import React from "react";
 
 import Activity from "./Activity";
+import SlickSlider from "../Slider/Slider";
 import Styles from "./Activities.module.css";
 
 export default function Activities(props) {
@@ -14,7 +15,10 @@ export default function Activities(props) {
   return (
     <div className={`row ${Styles.Wrapper}`}>
       <div className={`col s12 ${Styles.Title}`}>{props.header}</div>
-      <div className={`col s12 ${Styles.Content}`}>{displayActivities}</div>
+      {/* <div className={`col s12 ${Styles.Content}`}>{displayActivities}</div> */}
+      <div className={`col s12 ${Styles.Content}`}>
+        <SlickSlider elements={displayActivities} />
+      </div>
     </div>
   );
 }

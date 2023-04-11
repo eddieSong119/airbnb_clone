@@ -1,16 +1,26 @@
 .Wrapper {
-  padding-left: 300px;
-  padding-right: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .ImgWrapper {
-  width: 60%;
-  height: 60vh;
+  width: 100%;
+  max-height: 60vh;
   overflow: hidden;
 }
 
 .Img {
   width: 100%;
+}
+
+.Content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .Title {
@@ -89,4 +99,37 @@
 .LogInLink {
   color: blue;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .BookingBox {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .DatePicker {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .Select {
+    margin-bottom: 10px;
+  }
+
+  .SubmitButton {
+    margin-top: 20px;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Title {
+    font-size: 32px;
+  }
+
+  .Location {
+    font-size: 14px;
+  }
 }

@@ -5,12 +5,11 @@ import { NavLink } from "react-router-dom";
 
 export default function AccountSideBar(props) {
   return (
-    <ul className="row">
+    <ul className="row" id="sideBar">
       <li className={`col s12`}>
         <NavLink
-          className={({ isActive }) =>
-            isActive ? Styles.SideBarLinkActive : Styles.SideBarLink
-          }
+          activeClassName={Styles.SideBarLinkActive}
+          className={Styles.SideBarLink}
           to={`reservations/confirmed`}
         >
           Confirmed Reservations
@@ -18,9 +17,8 @@ export default function AccountSideBar(props) {
       </li>
       <li className={`col s12`}>
         <NavLink
-          className={({ isActive }) =>
-            isActive ? Styles.SideBarLinkActive : Styles.SideBarLink
-          }
+          activeClassName={Styles.SideBarLinkActive}
+          className={Styles.SideBarLink}
           to={`reservations/past`}
         >
           Past Reservations
@@ -28,9 +26,8 @@ export default function AccountSideBar(props) {
       </li>
       <li className={`col s12`}>
         <NavLink
-          className={({ isActive }) =>
-            isActive ? Styles.SideBarLinkActive : Styles.SideBarLink
-          }
+          activeClassName={Styles.SideBarLinkActive}
+          className={Styles.SideBarLink}
           to={`reservations/change-pass`}
         >
           Change your password

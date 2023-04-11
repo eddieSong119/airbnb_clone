@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-
 import NavBar from "./utility/NavBar/NavBar";
 import Home from "./pages/Home/Home";
 import Modal from "./utility/Modal/Modal";

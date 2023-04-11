@@ -13,24 +13,24 @@ export default function Slider(props) {
     arrows: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    varialbleWidth: true,
+    variableWidth: true,
     responsive: [
       {
-        breakpoint: 1350,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 1030,
+        breakpoint: 992,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 690,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

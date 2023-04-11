@@ -1,6 +1,8 @@
 .Wrapper {
   width: 100%;
-  margin-bottom: 130px;
+  height: 730px;
+  overflow: hidden;
+  margin-bottom: 30px;
 }
 
 .Title {

@@ -4,23 +4,36 @@
 
 .SideBarLink {
   display: block;
-  width: 200px;
-  height: 100px;
-  line-height: 100px;
+  width: 100%;
+  height: 10vh;
+  line-height: 5vh;
   border: 1px solid gainsboro;
   text-align: center;
+  font-weight: bold;
   background-color: rgb(206, 203, 203);
   color: white;
+  text-decoration: none;
+}
+
+.SideBarLink:hover {
+  background-color: rgb(255, 252, 252);
+  color: black;
 }
 
 .SideBarLinkActive {
   display: block;
-  width: 200px;
-  height: 100px;
-  line-height: 100px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
   border: 1px solid gainsboro;
   text-align: center;
-  background-color: gr;
   background-color: rgb(255, 252, 252);
   color: black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .SideWrapper {
+    height: auto;
+  }
 }

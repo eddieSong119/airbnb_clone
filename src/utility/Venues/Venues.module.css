@@ -1,7 +1,7 @@
 .Wrapper {
   width: 100%;
-  height: auto;
-  margin-bottom: 250px;
+  height: 730px;
+  margin-bottom: 30px;
 }
 
 .Title {
@@ -18,7 +18,8 @@
 
 .Content {
   width: 100%;
-  height: 500px;
+  height: 600px;
   position: relative;
   top: 120px;
+  overflow: scroll;
 }
